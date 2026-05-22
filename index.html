@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hieran Ambesajer — Data Scientist & Automation Engineer</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--bg2:#f7f7f5;--bg3:#f0efe9;
+  --text:#1a1a1a;--text2:#555;--text3:#999;
+  --border:rgba(0,0,0,0.12);--border2:rgba(0,0,0,0.2);
+  --info-bg:#e6f1fb;--info-text:#185fa5;--info-border:#b5d4f4;
+  --success-bg:#eaf3de;--success-text:#3b6d11;
+  --warning-bg:#faeeda;--warning-text:#854f0b;
+  --radius:8px;--radius-lg:12px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;border-bottom:0.5px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:10}
+.nav-name{font-size:15px;font-weight:500}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{font-size:13px;color:var(--text2);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.hero{padding:4rem 2rem 3rem;max-width:760px;margin:0 auto}
+.hero-tag{font-size:12px;font-weight:500;color:var(--info-text);background:var(--info-bg);padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:1rem}
+.hero h1{font-size:38px;font-weight:500;line-height:1.2;margin-bottom:1rem}
+.hero h1 span{color:var(--info-text)}
+.hero-sub{font-size:16px;color:var(--text2);line-height:1.7;max-width:580px;margin-bottom:2rem}
+.hero-links{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--radius);border:0.5px solid var(--border2);font-size:13px;color:var(--text);background:var(--bg);cursor:pointer;transition:background 0.2s;text-decoration:none}
+.btn:hover{background:var(--bg2)}
+.btn-primary{background:var(--info-bg);border-color:var(--info-border);color:var(--info-text)}
+.btn-primary:hover{opacity:0.85}
+.section{padding:2.5rem 2rem;max-width:760px;margin:0 auto}
+.section-label{font-size:11px;font-weight:500;letter-spacing:0.08em;color:var(--text3);text-transform:uppercase;margin-bottom:1.5rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:2.5rem}
+.stat{background:var(--bg2);border-radius:var(--radius);padding:1rem;text-align:center}
+.stat-num{font-size:24px;font-weight:500}
+.stat-label{font-size:12px;color:var(--text2);margin-top:4px}
+.projects{display:grid;gap:16px}
+.project-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;transition:border-color 0.2s}
+.project-card:hover{border-color:var(--border2)}
+.project-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.75rem}
+.project-title{font-size:15px;font-weight:500}
+.project-badge{font-size:11px;padding:3px 8px;border-radius:20px;white-space:nowrap}
+.badge-ml{background:var(--info-bg);color:var(--info-text)}
+.badge-eng{background:var(--success-bg);color:var(--success-text)}
+.badge-bi{background:#EEEDFE;color:#3C3489}
+.project-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:1rem}
+.project-result{font-size:12px;font-weight:500;color:var(--success-text);background:var(--success-bg);padding:4px 10px;border-radius:var(--radius);display:inline-block;margin-bottom:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;padding:3px 8px;background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--radius);color:var(--text2)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.skill-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1rem}
+.skill-icon{font-size:20px;color:var(--info-text);margin-bottom:8px}
+.skill-title{font-size:13px;font-weight:500;margin-bottom:6px}
+.skill-items{font-size:12px;color:var(--text2);line-height:1.7}
+.exp-timeline{display:grid;gap:16px}
+.exp-item{display:grid;grid-template-columns:130px 1fr;gap:1rem;padding-bottom:1.5rem;border-bottom:0.5px solid var(--border)}
+.exp-item:last-child{border-bottom:none;padding-bottom:0}
+.exp-date{font-size:12px;color:var(--text3);padding-top:2px}
+.exp-role{font-size:14px;font-weight:500}
+.exp-company{font-size:13px;color:var(--info-text);margin-bottom:4px}
+.exp-desc{font-size:12px;color:var(--text2);line-height:1.6}
+.contact-card{background:var(--bg2);border-radius:var(--radius-lg);padding:2rem;text-align:center}
+.contact-card h2{font-size:20px;font-weight:500;margin-bottom:0.5rem}
+.contact-card p{font-size:14px;color:var(--text2);margin-bottom:1.5rem}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+hr{border:none;border-top:0.5px solid var(--border);max-width:760px;margin:0 auto}
+.footer{padding:1.5rem 2rem;text-align:center;font-size:12px;color:var(--text3)}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .hero h1{font-size:28px}
+  .exp-item{grid-template-columns:1fr}
+  .exp-date{padding-top:0}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-name">Hieran Ambesajer</span>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">Open to Werkstudent &amp; Intern roles · Berlin</div>
+  <h1>Data Scientist &amp;<br><span>Automation Engineer</span></h1>
+  <p class="hero-sub">M.Sc. Data Science candidate at BHT Berlin. I build end-to-end data pipelines, ML models, and automation systems that eliminate manual work and deliver measurable results in production.</p>
+  <div class="hero-links">
+    <a class="btn btn-primary" href="https://github.com/Heran-Am" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/hieran-ambesajer/" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+    <a class="btn" href="mailto:hambessajer@gmail.com"><i class="ti ti-mail"></i> hambessajer@gmail.com</a>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="stats">
+    <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Years in data roles</div></div>
+    <div class="stat"><div class="stat-num">500K+</div><div class="stat-label">Rows processed</div></div>
+    <div class="stat"><div class="stat-num">99.6%</div><div class="stat-label">Data accuracy achieved</div></div>
+    <div class="stat"><div class="stat-num">8h/wk</div><div class="stat-label">Manual work eliminated</div></div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section" id="projects">
+  <div class="section-label">Projects</div>
+  <div class="projects">
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-title">AI Training Data Pipeline</div>
+        <span class="project-badge badge-eng">Data Engineering</span>
+      </div>
+      <p class="project-desc">Built an end-to-end pipeline to generate, label, validate, and export structured datasets for ML model training at Wavess. Designed the quality validation framework that caught issues before they reached any model — producing ground-truth datasets used directly in production.</p>
+      <div class="project-result">✓ Zero records rejected in final QA pass</div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">REST API</span><span class="tag">Data Validation</span><span class="tag">ETL</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-title">Customer Churn Prediction Model</div>
+        <span class="project-badge badge-ml">Machine Learning</span>
+      </div>
+      <p class="project-desc">End-to-end classification model using scikit-learn's Hist-Gradient Boosting algorithm. Covered the full ML lifecycle: data ingestion, feature engineering, model training, hyperparameter tuning, and evaluation on a held-out test set.</p>
+      <div class="project-result">✓ 87% accuracy on test set</div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Feature Engineering</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-title">Automated Reporting Pipeline</div>
+        <span class="project-badge badge-eng">Automation</span>
+      </div>
+      <p class="project-desc">Identified and eliminated recurring manual reporting bottlenecks by building Python automation scripts processing 500K+ rows. Replaced error-prone human workflows with reliable, scheduled automation runs.</p>
+      <div class="project-result">✓ Accuracy improved from 91% to 99.6%</div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Process Automation</span><span class="tag">Data QA</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-title">Operational KPI Dashboard</div>
+        <span class="project-badge badge-bi">BI &amp; Analytics</span>
+      </div>
+      <p class="project-desc">Multi-page Power BI dashboard for KPI monitoring, data quality tracking, and operational performance reporting. Built the full validated data model underneath the visuals. Adopted by the operations team as their primary reporting tool.</p>
+      <div class="project-result">✓ Became primary reporting tool for ops team</div>
+      <div class="tags">
+        <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL</span><span class="tag">Data Modelling</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<section class="section" id="skills">
+  <div class="section-label">Technical skills</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-code"></i></div>
+      <div class="skill-title">Python &amp; ML</div>
+      <div class="skill-items">Pandas · NumPy · Scikit-learn · PyTorch · ETL pipelines · feature engineering</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-database"></i></div>
+      <div class="skill-title">SQL &amp; Databases</div>
+      <div class="skill-items">SQL (certified) · PostgreSQL · relational modelling · complex queries · data validation</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-api"></i></div>
+      <div class="skill-title">APIs &amp; Automation</div>
+      <div class="skill-items">REST API integration · Python scripting · process automation · GitHub · GitHub Actions</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-chart-bar"></i></div>
+      <div class="skill-title">BI &amp; Visualisation</div>
+      <div class="skill-items">Power BI · DAX · Matplotlib · Seaborn · dashboard design · KPI tracking</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-math"></i></div>
+      <div class="skill-title">Mathematics</div>
+      <div class="skill-items">Applied Mathematics · statistical modelling · numerical analysis · probability theory</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-world"></i></div>
+      <div class="skill-title">Languages</div>
+      <div class="skill-items">English (C1) · German (B1) · Arabic (intermediate) · Tigrinya (native)</div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section" id="experience">
+  <div class="section-label">Experience</div>
+  <div class="exp-timeline">
+    <div class="exp-item">
+      <div class="exp-date">Sep 2024 – Jul 2025</div>
+      <div>
+        <div class="exp-role">Data Scientist (Intern)</div>
+        <div class="exp-company">Wavess · Germany</div>
+        <div class="exp-desc">Built AI training data pipelines, REST API integrations, ETL workflows, and Power BI dashboards. Designed validation framework catching ~95% of data issues before downstream use.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Feb 2021 – Apr 2023</div>
+      <div>
+        <div class="exp-role">Data Analyst</div>
+        <div class="exp-company">School of Cloud / Eaglelion System Technology · Germany</div>
+        <div class="exp-desc">Automated reporting pipelines processing 500K+ rows, eliminating 8+ hrs/week of manual work and improving accuracy from 91% to 99.6%.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Jan 2018 – Nov 2020</div>
+      <div>
+        <div class="exp-role">Software Developer</div>
+        <div class="exp-company">National Insurance Corporation · Eritrea</div>
+        <div class="exp-desc">Built internal reporting systems and data workflows. Zero errors across all regulatory reporting cycles at national scale.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Oct 2023 – Present</div>
+      <div>
+        <div class="exp-role">M.Sc. Data Science</div>
+        <div class="exp-company">Berliner Hochschule für Technik (BHT) · Berlin</div>
+        <div class="exp-desc">Machine Learning · Data Engineering · Statistical Modelling · Applied Mathematics · Computer Vision · Database Systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section" id="contact">
+  <div class="contact-card">
+    <h2>Let's work together</h2>
+    <p>Open to Werkstudent and intern roles in Data Science, ML, or Automation Engineering in Berlin.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:hambessajer@gmail.com"><i class="ti ti-mail"></i> hambessajer@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/hieran-ambesajer/" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+      <a class="btn" href="https://github.com/Heran-Am" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">Hieran Ambesajer · Berlin, 2025</footer>
+
+</body>
+</html>
